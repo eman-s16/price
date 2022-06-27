@@ -1,0 +1,194 @@
+.App {
+    text-align: center;
+
+}
+.asa{
+    
+	background-repeat: no-repeat;
+	background-position: bottom left;
+    position: fixed;
+    top:0 ;
+    left:0;
+}
+.App h2.heading {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.App .switch {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.App .switch label {
+    background-color: #7E82E4;
+    width: 70px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.App .switch label:hover {
+    background-color: #C6C9F4;
+}
+.App .switch {
+    width: 250px;
+}
+.App .switch label .ball {
+    background-color: #fff;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    animation: slideBallOff 0.3s linear forwards;
+}
+.App .switch input {
+    display: none;
+}
+.App .switch input:checked + label .ball {
+    animation: slideBallOn 0.3s forwards linear;
+}
+@keyframes slideBallOff {
+    0% {
+        transform: translateX(-40px) scale(1);
+    }
+    50% {
+        transform: translateX(-20px) scale(1.2);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
+@keyframes slideBallOn {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(-20px) scale(1.2);
+    }
+    100% {
+        transform: translateX(-40px) scale(1);
+    }
+}
+@media screen and (max-width: 768px) {
+    .App h2.heading {
+        padding-top: 2.5rem;
+    }
+}
+
+/* background */
+
+.img-float img:first-of-type {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.img-float img:first-of-type,
+.img-float img:last-of-type {
+    width: 250px;
+    z-index: -999;
+}
+.img-float img:last-of-type {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* price */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrapper .box {
+    background-color: #fff;
+    box-shadow: 1px 3px 8px rgba(1, 1, 1, 0.4);
+    padding: 20px;
+    width: 310px;
+    height: 400px;
+    max-width: 100%;
+}
+.wrapper .box h4 {
+    font-size: 22px;
+}
+.wrapper .box h4,
+.wrapper .box h2 {
+    margin-bottom: 25px;
+}
+.wrapper .box h2 {
+    font-weight: bold;
+    font-size: 40px;
+}
+.wrapper .box button {
+    background-color: #7E82E4;
+    color: #fff;
+    padding: 15px 0;
+    outline: 0;
+    border: 1px solid #7E82E4;
+    width: 100%;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.wrapper .box button:hover {
+    background-color: transparent;
+    color: #7E82E4;
+}
+.wrapper .box.basic {
+    border-radius: 10px 0 0 10px;
+}
+.wrapper .box.pro {
+    border-radius: 10px;
+    transform: scale(1.060);
+    background-color: #7E82E4;
+    color: #fff;
+}
+.wrapper .box.pro button {
+    background-color: #fff;
+    color: #7E82E4;
+}
+.wrapper .box.pro button:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.wrapper .box.master {
+    border-radius: 0 10px 10px 0;
+}
+ul {
+    list-style: none;
+}
+.wrapper .box ul {
+    margin-bottom: 20px;
+}
+.wrapper .box ul li {
+    padding: 20px 0;
+}
+.wrapper .box ul li:first-child {
+    padding-top: 0;
+}
+.wrapper .box ul li:not(:first-child) {
+    border-top: 1px solid #EDEDED;
+}
+@media screen and (max-width: 968px) {
+    .wrapper {
+        display: block;
+    }
+    .wrapper .box {
+        margin: 0 auto 30px;
+    }
+    .wrapper .box.basic {
+        border-radius: 10px;
+    }
+    .wrapper .box.pro {
+        transform: scale(1);
+    }
+    .wrapper .box.master {
+        border-radius: 10px;
+    }
+}
+
+
